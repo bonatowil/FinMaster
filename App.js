@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';  
-import { useFonts, Inter_300Light } from '@expo-google-fonts/inter';
+import { useFonts, Inter_300Light, Inter_900Black } from '@expo-google-fonts/inter';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
-    Inter_300Light,
+    Inter_300Light, Inter_900Black
   });
 
   if (!fontsLoaded) {
@@ -12,7 +12,7 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Text style={{ fontFamily: 'Inter_300Light', color: '#fdf0d5', }}>Open up App.js to start working on your app!</Text>
+      <Text style={{ fontFamily: 'Inter_900Black', color: '#fdf0d5', }}>FinMaster</Text>
       <StatusBar style="auto" />
     </View>
   );
