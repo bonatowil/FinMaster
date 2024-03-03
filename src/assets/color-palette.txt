@@ -1,5 +1,0 @@
-Main light color: #669bbc
-Main dark color: #003049
-Text/Neutral color: #fdf0d5
-Secundary light color: #c1121f
-Secundary dark color: #780000
