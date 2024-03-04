@@ -1,0 +1,5 @@
+Smoky Black = 171313
+Oxford Blue = 01172F
+Celtic Blue = 266DD3
+Light sea green = 00B9AE
+Ivory = FFFFF3
