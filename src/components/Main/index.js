@@ -1,4 +1,4 @@
-import { View, Text, FlatList, SectionList, TouchableOpacity, Image} from "react-native";
+import { View, Text, SectionList, TouchableOpacity, Image} from "react-native";
 import style from "./style";
 import Transaction from "../Transaction";
 import { useState } from "react";
