@@ -8,24 +8,13 @@ export default function Main() {
         {   
           date: '05 MAR 2024', 
           data: [
-            'Devin',
-            'Dan',
-            'Dominic'
+            ['Comida', 'Restaurante Chique', '189,90', require('../../../assets/icons/Food.png')],
+            ['Compras Online', 'IFood', '28,50', require('../../../assets/icons/OnlineShopping.png')],
+            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../assets/icons/Gym.png')]
         ]
-    },
-        {
-          date: '04 MAR 2023',
-          data: [
-            'Jackson',
-            'James',
-            'Jillian',
-            'Jimmy',
-            'Joel',
-            'John',
-            'Julie',
-          ],
-        },
+    }
       ])
+    transaction[0].date = 'test'
     return (
         <View style={style.mainContainer}>
         <View style={style.saldo}>
@@ -65,7 +54,7 @@ export default function Main() {
                     <SectionList
                     style={style.transactions}
                     sections={transaction}
-                    renderItem={({item}) => <Transaction></Transaction>}
+                    renderItem={({item}) => <Transaction type={item[0]} desc={item[1]} value={item[2]} image={item[3]}/>}
                     renderSectionHeader={({section}) => (<Text style={style.textDate}>{section.date}</Text>)}
                     />
                 </View>    
