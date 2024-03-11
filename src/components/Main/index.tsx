@@ -14,7 +14,6 @@ export default function Main() {
         ]
     }
       ])
-    transaction[0].date = 'test'
     return (
         <View style={style.mainContainer}>
         <View style={style.saldo}>
@@ -22,10 +21,10 @@ export default function Main() {
             <Text style={style.saldoText}>R$ 2.530,37</Text>
         </View>
             <View style={style.mainWrap}>
-                <View style={style.main}>
-                    <View style={style.quickAccess}>
+                <View>
+                    <View>
                         <Text style={style.quickAccessLabel}>Acesso Rápido</Text>
-                        <View style={style.quickAccessButtons} horizontal={true}>
+                        <View style={style.quickAccessButtons}>
                             <TouchableOpacity style={style.quickAccessButton}>
                                 <Image style={style.quickAccessImage} source={require('../../../assets/icons/Bank.png')}></Image>
                                 <Text style={style.quickAccessText}>Contas</Text>
