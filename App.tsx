@@ -9,20 +9,12 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return null;
+    return null
   }
   return (
-    <View style={styles.container}>
+    <View>
       <Main></Main>
       <StatusBar style="auto" />
     </View>
-  );
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#003049',
-    justifyContent: 'flex-end',
-  },
-});

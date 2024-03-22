@@ -2,23 +2,42 @@ import { View, Text, SectionList, TouchableOpacity, Image} from "react-native";
 import style from "./style";
 import Transaction from "../Transaction";
 import { useState } from "react";
+import eyeOn from '../../../assets/icons/EyeOpen.png'
+import eyeOff from '../../../assets/icons/EyeClosed.png'
 
 export default function Main() {
     const [transaction, setTransaction] = useState([
         {   
-          date: '05 MAR 2024', 
+          date: '06 MAR 24',
           data: [
             ['Comida', 'Restaurante Chique', '189,90', require('../../../assets/icons/Food.png')],
             ['Compras Online', 'IFood', '28,50', require('../../../assets/icons/OnlineShopping.png')],
             ['Saúde', 'Mensalidade Academia', '99,00', require('../../../assets/icons/Gym.png')]
         ]
-    }
-      ])
+        },
+        {
+          date: '05 MAR 24',
+          data: [
+            ['Comida', 'Restaurante Chique', '189,90', require('../../../assets/icons/Food.png')],
+            ['Compras Online', 'IFood', '28,50', require('../../../assets/icons/OnlineShopping.png')],
+            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../assets/icons/Gym.png')]
+					]
+        },
+				{
+          date: '05 MAR 24',
+          data: [
+            ['Comida', 'Restaurante Chique', '189,90', require('../../../assets/icons/Food.png')],
+            ['Compras Online', 'IFood', '28,50', require('../../../assets/icons/OnlineShopping.png')],
+            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../assets/icons/Gym.png')]
+					]
+				}
+])
     return (
         <View style={style.mainContainer}>
         <View style={style.saldo}>
             <Text style={style.saldoLabel}>Saldo total</Text>
             <Text style={style.saldoText}>R$ 2.530,37</Text>
+
         </View>
             <View style={style.mainWrap}>
                 <View>
