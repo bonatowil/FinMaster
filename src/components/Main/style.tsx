@@ -24,10 +24,26 @@ const style = StyleSheet.create({
         fontFamily: 'Inter_700Bold',
         fontSize: 40,
     },
+    saldoTextHidden: {
+        fontFamily: 'Inter_700Bold',
+        color: "#fff0",
+        textShadowColor: "#05fcee",
+        textShadowOffset: {
+            width: -50,
+            height: 0,
+        },
+        textShadowRadius: 1000,
+        fontSize: 40,
+    },
     saldoLabel: {
         color: '#FFFFF3',
         fontFamily: 'Inter_300Light',
         fontSize: 15,
+        paddingBottom: 8,
+    },
+    saldoImg: {
+        width: 20,
+        height: 20,
     },
     quickAccessLabel: {
         paddingTop: 20,
@@ -72,6 +88,9 @@ const style = StyleSheet.create({
     },
     transactions: {
         paddingHorizontal: 20,
+        flexGrow: 1,
+        flex: 1,
+        paddingBottom: 450,
     },
     textDate: {
         marginBottom: 15,

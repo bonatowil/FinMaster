@@ -1,4 +1,4 @@
-import { View, Text, SectionList, TouchableOpacity, Image} from "react-native";
+import { View, Text, SectionList, TouchableOpacity, Image, ScrollView} from "react-native";
 import style from "./style";
 import Transaction from "../Transaction";
 import { useState } from "react";
@@ -6,7 +6,13 @@ import eyeOn from '../../../assets/icons/EyeOpen.png'
 import eyeOff from '../../../assets/icons/EyeClosed.png'
 
 export default function Main() {
-    const [transaction, setTransaction] = useState([
+	const [balanceVisibility, setBalanceVisibility] = useState(true);
+	const [balance, setBalance] = useState("R$ 2.530,37");
+
+	function changeBalanceVisibility() {
+		setBalanceVisibility(!balanceVisibility);	
+	}
+  const [transaction, setTransaction] = useState([
         {   
           date: '06 MAR 24',
           data: [
@@ -22,7 +28,7 @@ export default function Main() {
             ['Compras Online', 'IFood', '28,50', require('../../../assets/icons/OnlineShopping.png')],
             ['Saúde', 'Mensalidade Academia', '99,00', require('../../../assets/icons/Gym.png')]
 					]
-        },
+        }, 
 				{
           date: '05 MAR 24',
           data: [
@@ -36,8 +42,7 @@ export default function Main() {
         <View style={style.mainContainer}>
         <View style={style.saldo}>
             <Text style={style.saldoLabel}>Saldo total</Text>
-            <Text style={style.saldoText}>R$ 2.530,37</Text>
-
+            <Text style={balanceVisibility ? style.saldoText : style.saldoTextHidden}>{balance} <TouchableOpacity onPress={changeBalanceVisibility}><Image style={style.saldoImg} source={balanceVisibility ? eyeOn : eyeOff}/></TouchableOpacity></Text>
         </View>
             <View style={style.mainWrap}>
                 <View>
@@ -69,12 +74,14 @@ export default function Main() {
                         </View>
                         <View style={{flex: 1, height: .5, backgroundColor: 'black'}} />
                     </View>
-                    <SectionList
-                    style={style.transactions}
-                    sections={transaction}
-                    renderItem={({item}) => <Transaction type={item[0]} desc={item[1]} value={item[2]} image={item[3]}/>}
-                    renderSectionHeader={({section}) => (<Text style={style.textDate}>{section.date}</Text>)}
-                    />
+                    <View>
+                        <SectionList
+                        style={style.transactions}
+                        sections={transaction}
+                        renderItem={({item}) => <Transaction type={item[0]} desc={item[1]} value={item[2]} image={item[3]}/>}
+                        renderSectionHeader={({section}) => (<Text style={style.textDate}>{section.date}</Text>)}
+                        />
+                    </View>
                 </View>    
             </View>
         </View>
