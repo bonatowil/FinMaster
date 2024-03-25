@@ -42,8 +42,8 @@ const style = StyleSheet.create({
         paddingBottom: 8,
     },
     saldoImg: {
-        width: 20,
-        height: 20,
+        width: 25,
+        height: 25,
     },
     quickAccessLabel: {
         paddingTop: 20,

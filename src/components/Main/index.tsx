@@ -10,7 +10,7 @@ export default function Main() {
 	const [balance, setBalance] = useState("R$ 2.530,37");
 
 	function changeBalanceVisibility() {
-		setBalanceVisibility(!balanceVisibility);	
+		setBalanceVisibility((visibility: boolean) => {return !visibility});	
 	}
   const [transaction, setTransaction] = useState([
         {   
@@ -38,6 +38,7 @@ export default function Main() {
 					]
 				}
 ])
+    
     return (
         <View style={style.mainContainer}>
         <View style={style.saldo}>
