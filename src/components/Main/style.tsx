@@ -45,59 +45,6 @@ const style = StyleSheet.create({
         width: 25,
         height: 25,
     },
-    quickAccessLabel: {
-        paddingTop: 20,
-        paddingLeft: 20,
-        color: '#171313',
-        fontFamily: 'Inter_700Bold',
-        fontSize: 17,
-        opacity: .75,
-    },
-    quickAccessButtons: {
-        flexDirection: 'row',
-        paddingVertical: 15,
-        paddingHorizontal: 20,
-        width: '100%',
-        justifyContent: 'space-between',
-    },
-    quickAccessButton: {
-        height: 75,
-        width: 75,
-        borderRadius: 20,
-        borderColor: '#171313', 
-        borderWidth: 2,
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-    },
-    quickAccessImage: {
-        height: '50%',
-        width: '50%',
-    },
-    quickAccessText: {
-        color: '#171313',
-        fontFamily: 'Inter_700Bold',
-        opacity: 0.75,
-        fontSize: 13, 
-    },
-    separator: {
-        marginVertical: 15,
-        width: '80%',
-        alignSelf: 'center',
-        borderBottomColor: 'black',
-        borderBottomWidth: StyleSheet.hairlineWidth,    
-    },
-    transactions: {
-        paddingHorizontal: 20,
-        flexGrow: 1,
-        flex: 1,
-        paddingBottom: 450,
-    },
-    textDate: {
-        marginBottom: 15,
-        fontFamily: 'Inter_900Black',
-        color: '#171313',
-        opacity: 0.9,
-    },
 })
 
 export default style
