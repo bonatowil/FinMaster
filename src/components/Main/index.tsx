@@ -1,8 +1,7 @@
 import { View, Text, SectionList, TouchableOpacity, Image, ScrollView} from "react-native";
 import style from "./style";
-import QuickAccess from "../QuickAccess";
-import TransactionHistory from "../TransactionHistory";
 import { useState } from "react";
+import { QuickAccess, TransactionHistory} from "../MainComponents";
 import eyeOn from '../../../assets/icons/EyeOpen.png'
 import eyeOff from '../../../assets/icons/EyeClosed.png'
 

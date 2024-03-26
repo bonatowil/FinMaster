@@ -1,9 +1,24 @@
-import { View, Text, SectionList } from "react-native"
+import { View, Text, TouchableOpacity, Image, SectionList } from "react-native"
 import { useState } from "react"
 import style from "./style"
-import Transaction from "../Transaction"
 
-export default function TransactionHistory() {
+function Transaction(props) {
+    return (
+    <View style={style.dateTransactions}>
+        <View style={style.singleTransaction}>
+            <View style={style.imageTransactionBorder}><Image style={style.imageTransaction} source={props.image}></Image></View>
+            <View>
+                <Text style={style.typeTransaction}>{props.type}</Text>
+                <Text style={style.descTransaction}>{props.desc}</Text>
+            </View>
+            <Text style={style.valueTransaction}>R$ {props.value}</Text>
+        </View>
+    </View>
+)
+
+}
+
+export function TransactionHistory() {
     const [transaction, setTransaction] = useState([
         {   
           date: '06 MAR 24',
@@ -47,6 +62,32 @@ export default function TransactionHistory() {
                 renderSectionHeader={({section}) => (<Text style={style.textDate}>{section.date}</Text>)}
                 />
             </View>
+        </View>
+    )
+}
+
+export function QuickAccess() {
+    return (
+        <View>
+            <Text style={style.quickAccessLabel}>Acesso Rápido</Text>
+            <View style={style.quickAccessButtons}>
+                <TouchableOpacity style={style.quickAccessButton}>
+                    <Image style={style.quickAccessImage} source={require('../../../assets/icons/Bank.png')}></Image>
+                    <Text style={style.quickAccessText}>Contas</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={style.quickAccessButton}>
+                    <Image style={style.quickAccessImage} source={require('../../../assets/icons/Inflow.png')}></Image>
+                    <Text style={style.quickAccessText}>Entrada</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={style.quickAccessButton}>
+                    <Image style={style.quickAccessImage} source={require('../../../assets/icons/Outflow.png')}></Image>
+                    <Text style={style.quickAccessText}>Saída</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={style.quickAccessButton}>
+                    <Image style={style.quickAccessImage} source={require('../../../assets/icons/Statistics.png')}></Image>
+                    <Text style={style.quickAccessText}>Finanças</Text>
+                </TouchableOpacity>
+                </View>
         </View>
     )
 }
