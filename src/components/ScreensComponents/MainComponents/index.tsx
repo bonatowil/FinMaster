@@ -23,25 +23,25 @@ export function TransactionHistory() {
         {   
           date: '06 MAR 24',
           data: [
-            ['Comida', 'Restaurante Chique', '189,90', require('../../../assets/icons/Food.png')],
-            ['Compras Online', 'IFood', '28,50', require('../../../assets/icons/OnlineShopping.png')],
-            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../assets/icons/Gym.png')]
+            ['Comida', 'Restaurante Chique', '189,90', require('../../../../assets/icons/Food.png')],
+            ['Compras Online', 'IFood', '28,50', require('../../../../assets/icons/OnlineShopping.png')],
+            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../../assets/icons/Gym.png')]
         ]
         },
         {
           date: '05 MAR 24',
           data: [
-            ['Comida', 'Restaurante Chique', '189,90', require('../../../assets/icons/Food.png')],
-            ['Compras Online', 'IFood', '28,50', require('../../../assets/icons/OnlineShopping.png')],
-            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../assets/icons/Gym.png')]
+            ['Comida', 'Restaurante Chique', '189,90', require('../../../../assets/icons/Food.png')],
+            ['Compras Online', 'IFood', '28,50', require('../../../../assets/icons/OnlineShopping.png')],
+            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../../assets/icons/Gym.png')]
 					]
         }, 
 				{
           date: '05 MAR 24',
           data: [
-            ['Comida', 'Restaurante Chique', '189,90', require('../../../assets/icons/Food.png')],
-            ['Compras Online', 'IFood', '28,50', require('../../../assets/icons/OnlineShopping.png')],
-            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../assets/icons/Gym.png')]
+            ['Comida', 'Restaurante Chique', '189,90', require('../../../../assets/icons/Food.png')],
+            ['Compras Online', 'IFood', '28,50', require('../../../../assets/icons/OnlineShopping.png')],
+            ['Saúde', 'Mensalidade Academia', '99,00', require('../../../../assets/icons/Gym.png')]
 					]
 				}
     ])
@@ -72,19 +72,19 @@ export function QuickAccess() {
             <Text style={style.quickAccessLabel}>Acesso Rápido</Text>
             <View style={style.quickAccessButtons}>
                 <TouchableOpacity style={style.quickAccessButton}>
-                    <Image style={style.quickAccessImage} source={require('../../../assets/icons/Bank.png')}></Image>
+                    <Image style={style.quickAccessImage} source={require('../../../../assets/icons/Bank.png')}></Image>
                     <Text style={style.quickAccessText}>Contas</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={style.quickAccessButton}>
-                    <Image style={style.quickAccessImage} source={require('../../../assets/icons/Inflow.png')}></Image>
+                    <Image style={style.quickAccessImage} source={require('../../../../assets/icons/Inflow.png')}></Image>
                     <Text style={style.quickAccessText}>Entrada</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={style.quickAccessButton}>
-                    <Image style={style.quickAccessImage} source={require('../../../assets/icons/Outflow.png')}></Image>
+                    <Image style={style.quickAccessImage} source={require('../../../../assets/icons/Outflow.png')}></Image>
                     <Text style={style.quickAccessText}>Saída</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={style.quickAccessButton}>
-                    <Image style={style.quickAccessImage} source={require('../../../assets/icons/Statistics.png')}></Image>
+                    <Image style={style.quickAccessImage} source={require('../../../../assets/icons/Statistics.png')}></Image>
                     <Text style={style.quickAccessText}>Finanças</Text>
                 </TouchableOpacity>
                 </View>

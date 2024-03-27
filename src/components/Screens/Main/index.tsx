@@ -1,9 +1,9 @@
 import { View, Text, SectionList, TouchableOpacity, Image, ScrollView} from "react-native";
 import style from "./style";
 import { useState } from "react";
-import { QuickAccess, TransactionHistory} from "../MainComponents";
-import eyeOn from '../../../assets/icons/EyeOpen.png'
-import eyeOff from '../../../assets/icons/EyeClosed.png'
+import { QuickAccess, TransactionHistory} from "../../ScreensComponents/MainComponents";
+import eyeOn from '../../../../assets/icons/EyeOpen.png'
+import eyeOff from '../../../../assets/icons/EyeClosed.png'
 
 export default function Main() {
 	const [balanceVisibility, setBalanceVisibility] = useState(true);
