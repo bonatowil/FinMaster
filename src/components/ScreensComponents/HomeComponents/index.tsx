@@ -4,9 +4,10 @@ import style from "./style"
 import { useNavigation } from "@react-navigation/native"
 
 function Transaction(props) {
+    const navigation = useNavigation()
     return (
     <View style={style.dateTransactions}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('BankAccount')}>
             <View style={style.singleTransaction}>
                 <View style={style.imageTransactionBorder}><Image style={style.imageTransaction} source={props.image}></Image></View>
                 <View>
