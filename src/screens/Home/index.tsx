@@ -2,8 +2,8 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import style from "./style";
 import { useState } from "react";
 import { QuickAccess, TransactionHistory} from "../../components/HomeComponents";
-import eyeOn from '../../../assets/icons/EyeOpen.png'
-import eyeOff from '../../../assets/icons/EyeClosed.png'
+import eyeOn from '../../assets/icons/EyeOpen.png'
+import eyeOff from '../../assets/icons/EyeClosed.png'
 
 export default function Home() {
 	const [balanceVisibility, setBalanceVisibility] = useState(true);
