@@ -36,7 +36,7 @@ export function QuickAccess() {
 function Transaction(props) {
     const navigation = useNavigation<StackTypes>()
     return (
-    <View style={style.dateTransactions}>
+    <View>
         <TouchableOpacity onPress={() => navigation.navigate('Contas')}>
             <View style={style.singleTransaction}>
                 <View style={style.imageTransactionBorder}><Image style={style.imageTransaction} source={props.image}></Image></View>
@@ -101,7 +101,7 @@ export function TransactionHistory() {
         
     ])
     return (
-        <View>
+        <View style={{flex: 1}}>
             <View style={{flexDirection: 'row', alignItems: 'center', width: '90%', alignSelf: 'center',}}>
                 <View style={{flex: 1, height: .5, backgroundColor: 'black'}} />
                 <View>
@@ -109,13 +109,15 @@ export function TransactionHistory() {
                 </View>
                 <View style={{flex: 1, height: .5, backgroundColor: 'black'}} />
             </View>
-            <View>
+            <View style={{flex: 1}}>
                 <SectionList
                 style={style.transactions}
+                contentContainerStyle={{flexGrow: 1}}
                 sections={transaction}
                 stickySectionHeadersEnabled={false}
                 renderItem={({item}) => <Transaction type={item[0]} desc={item[1]} value={item[2]} image={item[3]} positive={item[4]}/>}
                 renderSectionHeader={({section}) => (<Text style={style.textDate}>{section.date}</Text>)}
+                
                 />
             </View>
         </View>

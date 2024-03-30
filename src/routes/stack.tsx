@@ -30,7 +30,7 @@ export default function StackComponent() {
           <Stack.Screen name='Saídas' component={Outflow} options={{animation: 'fade'}}/>
           <Stack.Screen name='Finanças' component={Finances} options={{animation: 'fade'}}/>
         </Stack.Navigator>
-        <StatusBar style="auto" />
+        <StatusBar style="auto"/>
       </NavigationContainer>
       )
 }

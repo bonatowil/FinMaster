@@ -44,7 +44,6 @@ const style = StyleSheet.create({
         color: '#171313',
         opacity: 0.9,
     },
-    dateTransactions: {},
     singleTransaction: {
         marginLeft: 10,
         flexDirection: 'row',

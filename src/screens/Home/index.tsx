@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image} from "react-native";
 import style from "./style";
 import { useState } from "react";
 import { QuickAccess, TransactionHistory} from "../../components/HomeComponents";
@@ -20,10 +20,8 @@ export default function Home() {
                 <Text style={balanceVisibility ? style.saldoText : style.saldoTextHidden}>{moneyFormat(balance, null)} <TouchableOpacity onPress={changeBalanceVisibility}><Image style={style.saldoImg} source={balanceVisibility ? eyeOn : eyeOff}/></TouchableOpacity></Text>
             </View>
             <View style={style.homeWrap}>
-                <View>
-                    <QuickAccess></QuickAccess>
-                    <TransactionHistory></TransactionHistory>
-                </View>    
+                <QuickAccess></QuickAccess>
+                <TransactionHistory></TransactionHistory>
             </View>
         </View>
     )
