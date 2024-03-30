@@ -37,9 +37,6 @@ const style = StyleSheet.create({
     },
     transactions: {
         paddingHorizontal: 20,
-        flexGrow: 1,
-        flex: 1,
-        paddingBottom: 450,
     },
     textDate: {
         marginBottom: 15,
@@ -76,12 +73,20 @@ const style = StyleSheet.create({
     descTransaction: {
         fontFamily: 'Inter_400Regular',
     },
-    valueTransaction: {
+    valueTransactionPositive: {
         fontFamily: 'Inter_900Black',
         flex: 1,
         textAlign: 'right',
         opacity: 0.9,
+        color: '#0F9F2F',
     },
+    valueTransactionNegative: {
+        fontFamily: 'Inter_900Black',
+        flex: 1,
+        textAlign: 'right',
+        opacity: 0.9,
+        color: '#FF3A3A',
+    }
 })
 
 export default style

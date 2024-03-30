@@ -12,10 +12,10 @@ const Stack = createNativeStackNavigator();
 
 type StackNavigation = {
     Home: undefined,
-    BankAccount: undefined,
-    Inflow: undefined,
-    Outflow: undefined,
-    Finances: undefined,
+    Contas: undefined,
+    Entradas: undefined,
+    Saídas: undefined,
+    Finanças: undefined,
 }
 
 export type StackTypes = NativeStackNavigationProp<StackNavigation>
@@ -25,10 +25,10 @@ export default function StackComponent() {
         <NavigationContainer>
         <Stack.Navigator initialRouteName='Home'>
           <Stack.Screen name='Home' component={Home} options={{headerShown: false}} />
-          <Stack.Screen name='BankAccount' component={BankAccount}/>
-          <Stack.Screen name='Inflow' component={Inflow}/>
-          <Stack.Screen name='Outflow' component={Outflow}/>
-          <Stack.Screen name='Finances' component={Finances}/>
+          <Stack.Screen name='Contas' component={BankAccount} options={{animation: 'fade'}}/>
+          <Stack.Screen name='Entradas' component={Inflow} options={{animation: 'fade'}}/>
+          <Stack.Screen name='Saídas' component={Outflow} options={{animation: 'fade'}}/>
+          <Stack.Screen name='Finanças' component={Finances} options={{animation: 'fade'}}/>
         </Stack.Navigator>
         <StatusBar style="auto" />
       </NavigationContainer>

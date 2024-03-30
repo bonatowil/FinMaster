@@ -1,9 +1,9 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView} from "react-native";
 
 export default function BankAccount( {navigation} ) {
     return (
-        <View>
-            <Text>Contas de Banco</Text>
-        </View>
+            <SafeAreaView>
+                <Text>Contas de Banco</Text>
+            </SafeAreaView>
     )
 }
