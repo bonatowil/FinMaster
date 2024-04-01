@@ -1,12 +1,12 @@
-import { View, Text, SafeAreaView} from "react-native";
-import { TransactionHistory } from "../../components/HomeComponents";
-import { StatusBar } from "expo-status-bar";
-import { Constants } from "expo-constants";
+import { View, Text, FlatList} from "react-native";
+import style from "./style";
+import { Accounts } from "../../components/BackAccountComponents";
 
-export default function BankAccount( {navigation} ) {
+
+export default function BankAccounts( {navigation} ) {
     return (
-        <View>
-            <Text>Contas de Banco</Text>
+        <View style={style.mainContainer}>
+            <Accounts/>             
         </View>
     )
 }

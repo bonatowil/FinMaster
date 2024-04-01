@@ -1,4 +1,4 @@
-export function moneyFormat(num, positive) {
+export function moneyFormat(num: number, positive: boolean): string {
     let BRL = new Intl.NumberFormat('pt-br', {
         style: 'currency',
         currency: 'BRL',

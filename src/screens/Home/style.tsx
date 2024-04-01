@@ -8,7 +8,7 @@ const style = StyleSheet.create({
         justifyContent: 'space-between',
     },
     homeWrap: {
-        backgroundColor: '#FFFFF3',
+        backgroundColor: '#FAFFFF',
         height: '75%',
         borderTopStartRadius: 50,
         borderTopEndRadius: 50,
@@ -20,7 +20,7 @@ const style = StyleSheet.create({
         justifyContent: 'center',
     },
     saldoText: {
-        color: '#FFFFF3',
+        color: '#FAFFFF',
         fontFamily: 'Inter_700Bold',
         fontSize: 40,
     },
@@ -36,7 +36,7 @@ const style = StyleSheet.create({
         fontSize: 40,
     },
     saldoLabel: {
-        color: '#FFFFF3',
+        color: '#FAFFFF',
         fontFamily: 'Inter_300Light',
         fontSize: 15,
         paddingBottom: 8,

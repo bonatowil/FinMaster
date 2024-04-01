@@ -5,6 +5,7 @@ import { QuickAccess, TransactionHistory} from "../../components/HomeComponents"
 import { moneyFormat } from "../../utils";
 import eyeOn from '../../assets/icons/EyeOpen.png'
 import eyeOff from '../../assets/icons/EyeClosed.png'
+import { Pressable } from "react-native";
 
 export default function Home() {
 	const [balanceVisibility, setBalanceVisibility] = useState(true);
@@ -17,7 +18,12 @@ export default function Home() {
         <View style={style.homeContainer}>
             <View style={style.saldo}>
                 <Text style={style.saldoLabel}>Saldo total</Text>
-                <Text style={balanceVisibility ? style.saldoText : style.saldoTextHidden}>{moneyFormat(balance, null)} <TouchableOpacity onPress={changeBalanceVisibility}><Image style={style.saldoImg} source={balanceVisibility ? eyeOn : eyeOff}/></TouchableOpacity></Text>
+                <Text style={balanceVisibility ? style.saldoText : style.saldoTextHidden}>
+                    {moneyFormat(balance, null)}
+                    <TouchableOpacity style={{paddingLeft: 10}} onPress={changeBalanceVisibility}>
+                        <Image style={style.saldoImg} source={balanceVisibility ? eyeOn : eyeOff}/>
+                    </TouchableOpacity>
+                </Text>
             </View>
             <View style={style.homeWrap}>
                 <QuickAccess></QuickAccess>
