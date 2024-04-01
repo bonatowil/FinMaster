@@ -29,7 +29,18 @@
     "plugins": [
       "expo-font"
     ],
-    "sdkVersion": "50.0.0"
+    "sdkVersion": "50.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "be28733a-e226-49a4-b11a-580979495fdd"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/be28733a-e226-49a4-b11a-580979495fdd"
+    }
   },
   "name": "FinMaster"
 }

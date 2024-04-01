@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const style = StyleSheet.create({
+export const style = StyleSheet.create({
     mainContainer: {
         backgroundColor: "#FAFFFF",
         height: '100%',
