@@ -1,13 +1,14 @@
-import { View, Text, TouchableOpacity, FlatList, Image } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, Image, Modal } from "react-native";
 import { moneyFormat } from "../../utils";
 import style from "./style";
 import { setTokenSourceMapRange } from "typescript";
 import AddIcon from '../../assets/icons/Add.png'
+import { useState } from "react";
 
-export function Account(props) {
+function Account(props) {
     if (props.add) {
         return (
-            <TouchableOpacity style={[style.account]}>
+            <TouchableOpacity style={[style.account]} onPress={props.changeVisibility}>
                 <Image style={style.addAccount} source={AddIcon}/>
             </TouchableOpacity>
         )
@@ -26,6 +27,7 @@ export function Account(props) {
 }
 
 export function Accounts() {
+    const [visibility, setVisibility] = useState(false)
     const accounts = [
         { add: true}, { name: 'Wilson', bank: 'Nubank', balance: 100, color: '#BE7ADD'}, { name: 'Wilson', bank: 'Inter', balance: 200 , color: '#FBBD1D'},
         { name: 'Wilson', bank: 'Santander', balance: 200 , color: '#FF5151'}, { name: 'Wilson', bank: 'Nubank', balance: 100, color: '#BE7ADD'},
@@ -37,9 +39,17 @@ export function Accounts() {
             <FlatList
             data={accounts}
             columnWrapperStyle={{justifyContent: 'space-between'}}
-            renderItem={({item}) => <Account name={item.name} bank={item.bank} balance={item.balance} color={item.color} add={item.add}/>}
+            renderItem={({item}) => <Account changeVisibility={() => setVisibility(!visibility)} name={item.name} bank={item.bank} balance={item.balance} color={item.color} add={item.add}/>}
             numColumns={2}
             />
+            <Modal
+            transparent={true}
+            visible={visibility}
+            animationType={'slide'}
+            >
+                <Text>TESTE</Text>
+            </Modal>
+
         </View>
     )
 }

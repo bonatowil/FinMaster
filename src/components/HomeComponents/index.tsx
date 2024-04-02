@@ -36,26 +36,25 @@ export function QuickAccess() {
 function Transaction(props) {
     const navigation = useNavigation<StackTypes>()
     return (
-    <View>
-        <TouchableOpacity onPress={() => navigation.navigate('Contas')}>
-            <View style={style.singleTransaction}>
-                <View style={style.imageTransactionBorder}><Image style={style.imageTransaction} source={props.image}></Image></View>
-                <View>
-                    <Text style={style.typeTransaction}>{props.type}</Text>
-                    <Text style={style.descTransaction}>{props.desc}</Text>
+        <View>
+            <TouchableOpacity onPress={() => navigation.navigate('Contas')}>
+                <View style={style.singleTransaction}>
+                    <View style={style.imageTransactionBorder}><Image style={style.imageTransaction} source={props.image}></Image></View>
+                    <View>
+                        <Text style={style.typeTransaction}>{props.type}</Text>
+                        <Text style={style.descTransaction}>{props.desc}</Text>
+                    </View>
+                    <Text style={props.positive ? style.valueTransactionPositive : style.valueTransactionNegative}>
+                        {moneyFormat(props.value, props.positive)}
+                    </Text>
                 </View>
-                <Text style={props.positive ? style.valueTransactionPositive : style.valueTransactionNegative}>
-                    {moneyFormat(props.value, props.positive)}
-                </Text>
-            </View>
-        </TouchableOpacity>
-    </View>
+            </TouchableOpacity>
+        </View>
 )
 
 }
 
 export function TransactionHistory() {
-    const navigation = useNavigation<StackTypes>()
     const [transaction, setTransaction] = useState([
         {   
           date: '06 MAR 24',
@@ -117,7 +116,6 @@ export function TransactionHistory() {
                 stickySectionHeadersEnabled={false}
                 renderItem={({item}) => <Transaction type={item[0]} desc={item[1]} value={item[2]} image={item[3]} positive={item[4]}/>}
                 renderSectionHeader={({section}) => (<Text style={style.textDate}>{section.date}</Text>)}
-                
                 />
             </View>
         </View>
