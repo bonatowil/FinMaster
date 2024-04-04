@@ -24,7 +24,6 @@ export default function Home() {
         style={style.background}
         >
             <View style={style.saldo}>
-
                 <Text style={style.saldoLabel}>Saldo total</Text>
                 <Text style={balanceVisibility ? style.saldoText : style.saldoTextHidden}>
                     {moneyFormat(balance, null)}

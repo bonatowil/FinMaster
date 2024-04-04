@@ -21,6 +21,7 @@ const style = StyleSheet.create({
         flex: 1,
     },
     saldo: {
+        marginTop: 15,
         width: '100%',
         height: '20%',
         alignItems: 'center',
@@ -56,8 +57,8 @@ const style = StyleSheet.create({
         backgroundColor: '#FAFFFF',
         borderRadius: 40,
         paddingHorizontal: 5,
-        paddingVertical: 20,
-        marginVertical: 10,
+        paddingVertical: 10,
+        marginBottom: 10,
         marginHorizontal: 10,
         shadowColor: "#000",
         shadowOffset: {
