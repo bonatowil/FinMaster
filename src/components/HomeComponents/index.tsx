@@ -5,7 +5,6 @@ import { useNavigation } from "@react-navigation/native"
 import { StackTypes } from "../../routes/stack"
 import { moneyFormat } from "../../utils"
 
-
 export function QuickAccess() {
     const navigation = useNavigation<StackTypes>()
     return (
@@ -101,12 +100,8 @@ export function TransactionHistory() {
     ])
     return (
         <View style={{flex: 1}}>
-            <View style={{flexDirection: 'row', alignItems: 'center', width: '90%', alignSelf: 'center',}}>
-                <View style={{flex: 1, height: .5, backgroundColor: 'black'}} />
-                <View>
-                    <Text style={{color: '#171313', paddingHorizontal:8, textAlign: 'center', fontFamily: 'Inter_700Bold', opacity: 0.75, fontSize: 18}}>Extrato</Text>
-                </View>
-                <View style={{flex: 1, height: .5, backgroundColor: 'black'}} />
+            <View>
+                <Text style={{color: '#171313', paddingVertical:12, textAlign: 'center', fontFamily: 'Inter_700Bold', opacity: 0.75, fontSize: 18}}>Extrato</Text>
             </View>
             <View style={{flex: 1}}>
                 <SectionList

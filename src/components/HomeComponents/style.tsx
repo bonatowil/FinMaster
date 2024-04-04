@@ -2,7 +2,6 @@ import { StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
     quickAccessLabel: {
-        paddingTop: 20,
         paddingLeft: 20,
         color: '#171313',
         fontFamily: 'Inter_700Bold',
