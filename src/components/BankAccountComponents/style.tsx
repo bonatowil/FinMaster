@@ -51,6 +51,32 @@ const style = StyleSheet.create({
         fontFamily: 'Inter_700Bold',
         color: '#FFFFF3',
         fontSize: 15,
+    },
+    modalWrap: {
+        height: '100%',
+        backgroundColor: 'rgba(0, 0, 0, 0.25)',
+        justifyContent: 'flex-end',
+    },
+    registerModal: {
+        height: '40%',
+        padding: 20,
+        backgroundColor: '#FFFFF3',
+        borderColor: '#000',
+        borderWidth: 1,
+        borderBottomWidth: 0,
+        borderTopLeftRadius: 25,
+        borderTopRightRadius: 25,
+    },
+    modalTitle: {
+        flexDirection: 'row',
+        alignContent: 'center',
+        justifyContent: 'space-between'
+    },
+    separator: {
+        height: StyleSheet.hairlineWidth,
+        width: '100%',
+        backgroundColor: '#000',
+        marginTop: 8,
     }
 })
 

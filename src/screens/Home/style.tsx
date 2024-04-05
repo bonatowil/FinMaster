@@ -24,8 +24,8 @@ const style = StyleSheet.create({
         marginTop: 15,
         width: '100%',
         height: '20%',
-        alignItems: 'center',
         justifyContent: 'center',
+        paddingLeft: 14,
     },
     saldoText: {
         color: '#FAFFFF',
@@ -47,7 +47,6 @@ const style = StyleSheet.create({
         color: '#FAFFFF',
         fontFamily: 'Inter_300Light',
         fontSize: 15,
-        paddingBottom: 8,
     },
     saldoImg: {
         width: 25,

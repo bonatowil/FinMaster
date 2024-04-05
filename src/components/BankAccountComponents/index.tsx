@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, FlatList, Image, Modal } from "react-native";
+import { View, Text, TouchableOpacity, FlatList, Image, Modal} from "react-native";
 import { moneyFormat } from "../../utils";
 import style from "./style";
 import { setTokenSourceMapRange } from "typescript";
@@ -43,11 +43,22 @@ export function Accounts() {
             numColumns={2}
             />
             <Modal
-            transparent={true}
             visible={visibility}
-            animationType={'slide'}
+            transparent={true}
+            animationType={'fade'}
+            onRequestClose={this.closeModal}
             >
-                <Text>TESTE</Text>
+                <View style={style.modalWrap}>
+                    <View style={style.registerModal}>
+                        <View style={style.modalTitle}>
+                            <Text style={{fontFamily: 'Inter_700Bold', opacity: 0.75, margin: 8}}>Cadastrar conta bancária</Text>
+                            <TouchableOpacity onPress={() => setVisibility(false)}>
+                                <Image style={{height: 24, width: 24, resizeMode: 'center', margin: 8}} source={require('../../assets/icons/Close.png')}></Image>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={style.separator}></View>
+                    </View>
+                </View>
             </Modal>
 
         </View>
