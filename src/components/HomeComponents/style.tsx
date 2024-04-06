@@ -1,6 +1,35 @@
 import { StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
+    header: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    profile: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 16,
+    },
+    profileImageButton: {
+        backgroundColor: 'rgba(255, 255, 255, 0.75)',
+        padding: 5,
+        borderRadius: 12,
+        borderWidth: .5,
+        borderColor: '#171313'
+    },
+    profileImage: {
+        height: 36,
+        width: 36,
+    },
+    profileName: {
+        fontFamily: 'Inter_700Bold',
+        color: '#FAFFFF',
+    },
+    configImage: {
+        height: 32,
+        width: 32,   
+    },
     quickAccessLabel: {
         paddingLeft: 20,
         color: '#171313',
@@ -20,13 +49,21 @@ const style = StyleSheet.create({
         width: 75,
         borderRadius: 20,
         borderColor: '#171313', 
-        borderWidth: 2,
+        borderWidth: 1,
         alignItems: 'center',
         justifyContent: 'space-evenly',
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 5,
+            height: 5,
+        },
+        shadowOpacity: 1,
+        shadowRadius: 15,
     },
     quickAccessImage: {
-        height: '50%',
-        width: '50%',
+        // resizeMode: 'center',
+        height: '40%',
+        width: '40%',
     },
     quickAccessText: {
         color: '#171313',
@@ -36,6 +73,14 @@ const style = StyleSheet.create({
     },
     transactions: {
         paddingHorizontal: 20,
+    },
+    transactionLabel: {
+        color: '#171313',
+        paddingVertical:12,
+        textAlign: 'center',
+        fontFamily: 'Inter_700Bold',
+        opacity: 0.75,
+        fontSize: 18,
     },
     textDate: {
         marginBottom: 15,
@@ -50,7 +95,7 @@ const style = StyleSheet.create({
         marginBottom: 20,
     },
     imageTransactionBorder: {
-        borderWidth: 2,
+        borderWidth: 1,
         borderColor: 'black',
         borderRadius: 15,
         height: 50,

@@ -9,26 +9,39 @@ const style = StyleSheet.create({
         height: '100%',
       },
     homeContainer: {
-        backgroundColor: '#00B9AE',
+        backgroundColor: '#093637',
         height: '100%',
         width: '100%',
         justifyContent: 'space-between',
     },
     homeWrap: {
-        backgroundColor: '#FAFFFF',
+        backgroundColor: '#EFF2F1',
         borderTopStartRadius: 50,
         borderTopEndRadius: 50,
         flex: 1,
     },
+    headerBackground: {
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 0,
+        height: '100%',
+    },
+    header: {
+        marginTop: 50,
+        padding: 10,
+        backgroundColor: 'rgba(0, 0, 0, 0.20)',
+        borderRadius: 15,
+        marginHorizontal: 4,
+    },
     saldo: {
-        marginTop: 15,
         width: '100%',
-        height: '20%',
+        padding: 20,
         justifyContent: 'center',
         paddingLeft: 14,
     },
     saldoText: {
-        color: '#FAFFFF',
+        color: '#EFF2F1',
         fontFamily: 'Inter_700Bold',
         fontSize: 40,
     },
@@ -44,8 +57,8 @@ const style = StyleSheet.create({
         fontSize: 40,
     },
     saldoLabel: {
-        color: '#FAFFFF',
-        fontFamily: 'Inter_300Light',
+        color: '#EFF2F1',
+        fontFamily: 'Inter_400Regular',
         fontSize: 15,
     },
     saldoImg: {
@@ -53,19 +66,18 @@ const style = StyleSheet.create({
         height: 25,
     },
     quickAccess: {
-        backgroundColor: '#FAFFFF',
+        backgroundColor: '#EFF2F1',
         borderRadius: 40,
         paddingHorizontal: 5,
         paddingVertical: 10,
         marginBottom: 10,
         marginHorizontal: 10,
-        shadowColor: "#000",
+        shadowColor: "#FFF",
         shadowOffset: {
             width: 0,
             height: 5,
         },
-        shadowOpacity: 0.35,
-        shadowRadius: 5,
+        shadowOpacity: 0.15,
         elevation: 10,
     }
 })

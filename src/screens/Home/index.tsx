@@ -1,11 +1,10 @@
-import { View, Text, TouchableOpacity, Image} from "react-native";
+import { View, Text, TouchableOpacity, Image, ScrollView} from "react-native";
 import style from "./style";
 import { useState } from "react";
-import { QuickAccess, TransactionHistory} from "../../components/HomeComponents";
+import { QuickAccess, TransactionHistory, Header} from "../../components/HomeComponents";
 import { moneyFormat } from "../../utils";
 import eyeOn from '../../assets/icons/EyeOpen.png'
 import eyeOff from '../../assets/icons/EyeClosed.png'
-import { Pressable } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function Home() {
@@ -18,11 +17,16 @@ export default function Home() {
     return (
         <View style={style.homeContainer}>
         <LinearGradient
-        colors={['#266dd3', '#3aeadb']}
+        colors={['#44a08d', '#093637']}
         locations={[0.05, 1]}
         end={{x: 0.4, y: 0.3}}
         style={style.background}
         >
+            <ScrollView>
+            <View style={style.header}>
+                <View style={style.headerBackground}></View>
+                <Header/>
+            </View>
             <View style={style.saldo}>
                 <Text style={style.saldoLabel}>Saldo total</Text>
                 <Text style={balanceVisibility ? style.saldoText : style.saldoTextHidden}>
@@ -32,12 +36,13 @@ export default function Home() {
                     </TouchableOpacity>
                 </Text>
             </View>
-            <View style={style.quickAccess}>
-                <QuickAccess></QuickAccess>
-            </View>
-            <View style={style.homeWrap}>
-                <TransactionHistory></TransactionHistory>
-            </View>
+                <View style={style.quickAccess}>
+                    <QuickAccess></QuickAccess>
+                </View>
+                <View style={style.homeWrap}>
+                    <TransactionHistory></TransactionHistory>
+                </View>
+            </ScrollView>
         </LinearGradient>
         </View>
     )

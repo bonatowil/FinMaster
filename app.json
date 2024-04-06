@@ -9,7 +9,7 @@
     "splash": {
       "image": "src/assets/imgs/FinMaster.png",
       "resizeMode": "contain",
-      "backgroundColor": "#266DD3"
+      "backgroundColor": "#093637"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,7 +20,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "src/assets/imgs/adaptive-icon.png",
-        "backgroundColor": "#266DD3"
+        "backgroundColor": "#093637"
       }
     },
     "web": {
