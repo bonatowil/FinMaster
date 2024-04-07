@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, FlatList, Image, Modal} from "react-native";
+import { View, Text, TextInput, TouchableOpacity, FlatList, Image, Modal} from "react-native";
 import { moneyFormat } from "../../utils";
 import style from "./style";
 import { setTokenSourceMapRange } from "typescript";
@@ -55,6 +55,31 @@ export function Accounts() {
                             <TouchableOpacity onPress={() => setVisibility(false)}>
                                 <Image style={{height: 24, width: 24, resizeMode: 'center', margin: 8}} source={require('../../assets/icons/Close.png')}></Image>
                             </TouchableOpacity>
+                        </View>
+                        <View style={style.separator}></View>
+                        <View style={style.registerForm}>
+                            <View style={style.registerField}>
+                                <Text style={style.regiterLabel}>Titular da conta:</Text>
+                                <TextInput
+                                style={style.registerInput}
+                                selectionColor={'#44a08d'}
+                                ></TextInput>
+                            </View>
+                            <View style={style.registerField}>
+                                <Text style={style.regiterLabel}>Nome do banco:</Text>
+                                <TextInput
+                                style={style.registerInput}
+                                selectionColor={'#44a08d'}
+                                ></TextInput>
+                            </View>
+                            <View style={style.registerField}>
+                                <Text style={style.regiterLabel}>Valor inicial:</Text>
+                                <TextInput
+                                style={style.registerInput}
+                                keyboardType="numeric"
+                                selectionColor={'#44a08d'}
+                                ></TextInput>
+                            </View>
                         </View>
                         <View style={style.separator}></View>
                     </View>

@@ -77,6 +77,30 @@ const style = StyleSheet.create({
         width: '100%',
         backgroundColor: '#000',
         marginTop: 8,
+    },
+    registerForm: {
+        marginVertical: 15,
+        gap: 15,
+    },
+    registerField: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 10,
+    },
+    regiterLabel: {
+        fontFamily: 'Inter_400Regular',
+        flexBasis: '35%',
+        textAlign: 'right'
+    },
+    registerInput: {
+        borderWidth: 1,
+        borderColor: '#000',
+        marginRight: 10,
+        flexBasis: '65%',
+        borderRadius: 5,
+        paddingLeft: 5,
+        padding: 3
     }
 })
 
